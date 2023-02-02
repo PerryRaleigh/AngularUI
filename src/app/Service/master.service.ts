@@ -4,13 +4,12 @@ import { Observable } from 'rxjs';
 import { Customer } from '../Model/Customer';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class MasterService {
+  constructor(private http: HttpClient) {}
 
-  constructor(private http:HttpClient) { }
-
-  GetCustomer():Observable<Customer[]>{
-    return this.http.get<Customer[]>("https://localhost:8082/Customer/GetAll");
+  GetCustomer(): Observable<Customer[]> {
+    return this.http.get<Customer[]>('https://localhost:8082/Customer/GetAll');
   }
 }

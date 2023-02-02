@@ -1,4 +1,4 @@
-export interface Customer{
-    name:string,
-    code:string
+export interface Customer {
+  name: string;
+  code: string;
 }
